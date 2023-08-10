@@ -1,5 +1,8 @@
+package unit;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 
 class CheckerTest {
 
@@ -57,20 +60,23 @@ class CheckerTest {
     void DivideMathMethodTesting() {
         Assertions.assertTrue(CalculateVoid.DivideCalculateForTest(10.2, 10));
     }
+
     @Test
     void DivideMathMethodZeroTesting() {
         Assertions.assertFalse(CalculateVoid.DivideCalculateForTest(10.2, 0));
     }
+
     @Test
-    void CheckBdValidValue(){
+    void CheckBdValidValue() {
         Double expected = 1.111;
         Double input = 1.11111111111111;
-        Assertions.assertEquals(expected,CalculateVoid.bigDecimal(input));
+        Assertions.assertEquals(expected, CalculateVoid.bigDecimal(input));
     }
+
     @Test
-    void CheckBdValidNegativeValue(){
+    void CheckBdValidNegativeValue() {
         Double expected = 1.1111;
         Double input = 1.1111;
-        Assertions.assertNotEquals(expected,CalculateVoid.bigDecimal(input));
+        Assertions.assertNotEquals(expected, CalculateVoid.bigDecimal(input));
     }
 }

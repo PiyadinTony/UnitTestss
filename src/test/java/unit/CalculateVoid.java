@@ -1,4 +1,7 @@
-import org.example.Calculator;
+package unit;
+
+import org.example.unit.Calculator;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -8,7 +11,8 @@ public class CalculateVoid {
         } while (CalculateVoid.isEmpty(str2) || !CalculateVoid.isNumber(str2) || !CalculateVoid.isLengthCorrect(str2, 3));
         return Double.parseDouble(str2);
     }
-    public static boolean AddCalculateForTest(Double a,double b) {
+
+    public static boolean AddCalculateForTest(Double a, double b) {
         Calculator calculator2 = new Calculator();
         String operation = "+";
 
@@ -19,10 +23,12 @@ public class CalculateVoid {
             case "/" -> calculator2.divide(a, b);
             default -> throw new IllegalArgumentException("Invalid operation.");
 
-        };
+        }
+        ;
         return true;
     }
-    public static boolean SubtractCalculateForTest(Double a,double b) {
+
+    public static boolean SubtractCalculateForTest(Double a, double b) {
         Calculator calculator2 = new Calculator();
         String operation = "-";
 
@@ -33,10 +39,12 @@ public class CalculateVoid {
             case "/" -> calculator2.divide(a, b);
             default -> throw new IllegalArgumentException("Invalid operation.");
 
-        };
+        }
+        ;
         return true;
     }
-    public static boolean MultiplyCalculateForTest(Double a,double b) {
+
+    public static boolean MultiplyCalculateForTest(Double a, double b) {
         Calculator calculator2 = new Calculator();
         String operation = "*";
 
@@ -47,10 +55,12 @@ public class CalculateVoid {
             case "/" -> calculator2.divide(a, b);
             default -> throw new IllegalArgumentException("Invalid operation.");
 
-        };
+        }
+        ;
         return true;
     }
-    public static boolean DivideCalculateForTest(Double a,double b) {
+
+    public static boolean DivideCalculateForTest(Double a, double b) {
         Calculator calculator2 = new Calculator();
         String operation = "/";
         try {
@@ -61,10 +71,11 @@ public class CalculateVoid {
                 case "/" -> calculator2.divide(a, b);
                 default -> throw new IllegalArgumentException("Invalid operation.");
 
-        }
+            }
         } catch (IllegalArgumentException e) {
             return false;
-        };
+        }
+        ;
         return true;
     }
 
@@ -90,6 +101,7 @@ public class CalculateVoid {
         }
         return true;
     }
+
     public static double bigDecimal(Double b) {
         BigDecimal bd = new BigDecimal(b).setScale(3, RoundingMode.HALF_UP);
         return bd.doubleValue();
