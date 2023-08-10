@@ -1,5 +1,8 @@
 package org.example;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class App extends Checker {
     public static void ApplicationCalculate() {
         Calculator calculator = new Calculator();
@@ -16,9 +19,9 @@ public class App extends Checker {
             case "*" -> calculator.multiply(a, b);
             case "/" -> calculator.divide(a, b);
             default -> throw new IllegalArgumentException("Invalid operation.");
-
         };
-        System.out.println("Result: " + result);
+        Checker.bigDecimal(result);
+        System.out.println("Result: " + Checker.bigDecimal(result));
     }
 }
 

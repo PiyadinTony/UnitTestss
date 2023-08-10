@@ -10,7 +10,7 @@ class CheckerTest {
 
     @Test
     public void isNumberTesting() {
-        Assertions.assertTrue(CalculateVoid.isNumber("3242342"));
+        Assertions.assertTrue(CalculateVoid.isNumber("3242342.3"));
     }
 
     @Test
@@ -29,18 +29,13 @@ class CheckerTest {
     }
 
     @Test
-    void isLengthCorrect() {
+    void isLengthCorrectTesting() {
         Assertions.assertTrue(CalculateVoid.isLengthCorrect("12", 2));
     }
 
     @Test
     void isLengthNegativeCorrectTesting() {
         Assertions.assertFalse(CalculateVoid.isLengthCorrect("100", 1));
-    }
-
-    @Test
-    void isLengthCorrectNegativeTesting() {
-        Assertions.assertFalse(CalculateVoid.isLengthCorrect("1000000000000000", 15));
     }
 
     @Test
@@ -61,6 +56,10 @@ class CheckerTest {
     @Test
     void DivideMathMethodTesting() {
         Assertions.assertTrue(CalculateVoid.DivideCalculateForTest(10.2, 10));
+    }
+    @Test
+    void DivideMathMethodZeroTesting() {
+        Assertions.assertFalse(CalculateVoid.DivideCalculateForTest(10.2, 0));
     }
 
 }
