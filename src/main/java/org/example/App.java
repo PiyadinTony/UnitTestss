@@ -1,8 +1,5 @@
 package org.example;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 public class App extends Checker {
     public static void ApplicationCalculate() {
         Calculator calculator = new Calculator();

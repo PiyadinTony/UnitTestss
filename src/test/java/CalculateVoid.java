@@ -1,6 +1,6 @@
 import org.example.Calculator;
-import org.example.Checker;
-import java.util.Scanner;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class CalculateVoid {
     public static double checkDoubleForTestMethod(String str2) {
@@ -90,4 +90,9 @@ public class CalculateVoid {
         }
         return true;
     }
+    public static double bigDecimal(Double b) {
+        BigDecimal bd = new BigDecimal(b).setScale(3, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
 }
+

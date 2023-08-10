@@ -61,5 +61,16 @@ class CheckerTest {
     void DivideMathMethodZeroTesting() {
         Assertions.assertFalse(CalculateVoid.DivideCalculateForTest(10.2, 0));
     }
-
+    @Test
+    void CheckBdValidValue(){
+        Double expected = 1.111;
+        Double input = 1.11111111111111;
+        Assertions.assertEquals(expected,CalculateVoid.bigDecimal(input));
+    }
+    @Test
+    void CheckBdValidNegativeValue(){
+        Double expected = 1.1111;
+        Double input = 1.1111;
+        Assertions.assertNotEquals(expected,CalculateVoid.bigDecimal(input));
+    }
 }
