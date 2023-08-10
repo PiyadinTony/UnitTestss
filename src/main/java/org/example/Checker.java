@@ -48,8 +48,8 @@ public class Checker {
         return Double.parseDouble(str);
     }
 
-    public static double bigDecimal(Double b) {
-        BigDecimal bd = new BigDecimal(b).setScale(3, RoundingMode.HALF_UP);
+    public static double bigDecimal(Double a) {
+        BigDecimal bd = new BigDecimal(a).setScale(3, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
 }
